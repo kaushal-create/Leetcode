@@ -1,7 +1,7 @@
 class NumberContainers {
 public:
-    map<int, set<int>>mst;
-    map<int,int> mp;
+    unordered_map<int, set<int>>mst;
+    unordered_map<int,int> mp;
     NumberContainers() {}
     
     void change(int index, int number) {
