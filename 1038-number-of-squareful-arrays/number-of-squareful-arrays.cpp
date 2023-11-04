@@ -12,11 +12,9 @@ public:
         long long ans = 0;
         for(int i = 0; i<nums.size(); i++){
             if(prev == -1){
-                // cout<<nums[i]<<" ";
                 ans += solve(i, mask^(1<<i), nums);
             }
             else if((mask>>i)&1 == 1 && isPossible(nums[i] + nums[prev])){
-                // cout<<nums[i]<<" ";
                 ans += solve(i, mask^(1<<i), nums);
             }
         }
