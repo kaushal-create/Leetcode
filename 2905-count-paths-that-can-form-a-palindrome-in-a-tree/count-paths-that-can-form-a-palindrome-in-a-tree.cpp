@@ -17,7 +17,6 @@ public:
         dfs(0, 0, adj, s);
         long long ans = 0;
         for(auto [x,y]: mp){
-            cout<<x<<" "<<y<<endl;
             ans += y*1LL*(y-1);
             for(int i = 0; i<26; i++){
                 if(mp.find(x^(1<<i)) != mp.end()) ans += y*1LL*mp[x^(1<<i)];
